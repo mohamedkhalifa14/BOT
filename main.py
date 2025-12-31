@@ -19,6 +19,7 @@ import os
 # ================== الإعدادات ==================
 import os
 BOT_TOKEN = os.getenv("BOT_TOKEN")
+app = ApplicationBuilder().token(BOT_TOKEN).build()
 ADMIN_ID = 5561309338
 GROUP_ID = -1003506672561
 
@@ -228,4 +229,5 @@ app.add_handler(CallbackQueryHandler(buttons))
 
 print("🚀 Bot running safely")
 app.run_polling()
+
 
