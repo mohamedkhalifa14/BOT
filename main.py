@@ -17,7 +17,8 @@ from openpyxl import load_workbook
 import os
 
 # ================== الإعدادات ==================
-BOT_TOKEN = "8416102636:AAH1ZfNxTvWUOvpECxvilcxeAzXTM0-fyzA"
+import os
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 ADMIN_ID = 5561309338
 GROUP_ID = -1003506672561
 
@@ -227,3 +228,4 @@ app.add_handler(CallbackQueryHandler(buttons))
 
 print("🚀 Bot running safely")
 app.run_polling()
+
